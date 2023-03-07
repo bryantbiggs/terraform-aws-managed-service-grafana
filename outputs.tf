@@ -7,6 +7,11 @@ output "workspace_arn" {
   value       = try(aws_grafana_workspace.this[0].arn, null)
 }
 
+output "workspace_id" {
+  description = "The ID of the Grafana workspace"
+  value       = try(aws_grafana_workspace.this[0].id, null)
+}
+
 output "workspace_endpoint" {
   description = "The endpoint of the Grafana workspace"
   value       = try(aws_grafana_workspace.this[0].endpoint, null)
@@ -66,4 +71,18 @@ output "license_free_trial_expiration" {
 output "license_expiration" {
   description = "If `license_type` is set to `ENTERPRISE`, this is the expiration date of the enterprise license"
   value       = try(aws_grafana_license_association.this[0].license_expiration, null)
+}
+
+################################################################################
+# Security Group
+################################################################################
+
+output "security_group_arn" {
+  description = "Amazon Resource Name (ARN) of the security group"
+  value       = try(aws_security_group.this[0].arn, null)
+}
+
+output "security_group_id" {
+  description = "ID of the security group"
+  value       = try(aws_security_group.this[0].id, null)
 }

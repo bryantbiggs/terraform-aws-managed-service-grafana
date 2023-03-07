@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.8.0](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/compare/v1.7.0...v1.8.0) (2023-02-02)
+
+
+### Features
+
+* Add workpace `configuration` argument ([#17](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/issues/17)) ([85ada19](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/commit/85ada198438acd218ee1e10850f2ff820de73be3))
+
+## [1.7.0](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/compare/v1.6.0...v1.7.0) (2023-02-02)
+
+
+### Features
+
+* Add support for `vpc_configuration` along with creating an associated security group ([#15](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/issues/15)) ([6d50e63](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/commit/6d50e6336b44045ab63c6d1cac31514b61feee98))
+
+## [1.6.0](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/compare/v1.5.1...v1.6.0) (2022-12-04)
+
+
+### Features
+
+* Add workspace ID as output attribute ([#11](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/issues/11)) ([d2e19e9](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/commit/d2e19e94eb72c6877372e75b1a8fd79fdc19a152))
+
+### [1.5.1](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/compare/v1.5.0...v1.5.1) (2022-11-07)
+
+
+### Bug Fixes
+
+* Update CI configuration files to use latest version ([#12](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/issues/12)) ([8027f54](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/commit/8027f549a69ac565bd13a0ed10e22844945eb68e))
+
 ## [1.5.0](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/compare/v1.4.0...v1.5.0) (2022-08-26)
 
 

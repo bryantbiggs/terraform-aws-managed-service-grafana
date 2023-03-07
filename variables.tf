@@ -56,6 +56,12 @@ variable "permission_type" {
   default     = "SERVICE_MANAGED"
 }
 
+variable "configuration" {
+  description = "The configuration string for the workspace"
+  type        = string
+  default     = null
+}
+
 variable "data_sources" {
   description = "The data sources for the workspace. Valid values are `AMAZON_OPENSEARCH_SERVICE`, `ATHENA`, `CLOUDWATCH`, `PROMETHEUS`, `REDSHIFT`, `SITEWISE`, `TIMESTREAM`, `XRAY`"
   type        = list(string)
@@ -84,6 +90,12 @@ variable "stack_set_name" {
   description = "The AWS CloudFormation stack set name that provisions IAM roles to be used by the workspace"
   type        = string
   default     = null
+}
+
+variable "vpc_configuration" {
+  description = "The configuration settings for an Amazon VPC that contains data sources for your Grafana workspace to connect to"
+  type        = any
+  default     = {}
 }
 
 ################################################################################
@@ -265,5 +277,45 @@ variable "license_type" {
 variable "role_associations" {
   description = "Map of maps to assocaite user/group IDs to a role. Map key can be used as the `role`"
   type        = any
+  default     = {}
+}
+
+################################################################################
+# Security Group
+################################################################################
+
+variable "create_security_group" {
+  description = "Determines if a security group is created"
+  type        = bool
+  default     = true
+}
+
+variable "security_group_name" {
+  description = "Name to use on security group created"
+  type        = string
+  default     = null
+}
+
+variable "security_group_use_name_prefix" {
+  description = "Determines whether the security group name (`security_group_name`) is used as a prefix"
+  type        = bool
+  default     = true
+}
+
+variable "security_group_description" {
+  description = "Description of the security group created"
+  type        = string
+  default     = null
+}
+
+variable "security_group_rules" {
+  description = "Security group rules to add to the security group created"
+  type        = any
+  default     = {}
+}
+
+variable "security_group_tags" {
+  description = "A map of additional tags to add to the security group created"
+  type        = map(string)
   default     = {}
 }

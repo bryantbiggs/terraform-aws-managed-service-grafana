@@ -24,11 +24,13 @@ Note that this example may create resources which will incur monetary charges on
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13.1 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.28 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 4.51 |
 
 ## Providers
 
-No providers.
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 4.51 |
 
 ## Modules
 
@@ -37,10 +39,13 @@ No providers.
 | <a name="module_managed_grafana"></a> [managed\_grafana](#module\_managed\_grafana) | ../.. | n/a |
 | <a name="module_managed_grafana_default"></a> [managed\_grafana\_default](#module\_managed\_grafana\_default) | ../.. | n/a |
 | <a name="module_managed_grafana_disabled"></a> [managed\_grafana\_disabled](#module\_managed\_grafana\_disabled) | ../.. | n/a |
+| <a name="module_vpc"></a> [vpc](#module\_vpc) | terraform-aws-modules/vpc/aws | ~> 3.0 |
 
 ## Resources
 
-No resources.
+| Name | Type |
+|------|------|
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
 
 ## Inputs
 
@@ -60,6 +65,7 @@ No inputs.
 | <a name="output_workspace_iam_role_arn"></a> [workspace\_iam\_role\_arn](#output\_workspace\_iam\_role\_arn) | IAM role ARN of the Grafana workspace |
 | <a name="output_workspace_iam_role_name"></a> [workspace\_iam\_role\_name](#output\_workspace\_iam\_role\_name) | IAM role name of the Grafana workspace |
 | <a name="output_workspace_iam_role_unique_id"></a> [workspace\_iam\_role\_unique\_id](#output\_workspace\_iam\_role\_unique\_id) | Stable and unique string identifying the IAM role |
+| <a name="output_workspace_id"></a> [workspace\_id](#output\_workspace\_id) | The ID of the Grafana workspace |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 Apache-2.0 Licensed. See [LICENSE](https://github.com/terraform-aws-modules/terraform-aws-managed-service-grafana/blob/main/LICENSE).
